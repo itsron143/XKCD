@@ -7,7 +7,7 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
 
 
  ## About
- **xkcd** is a command line tool written in Python which will fetch you the comics right in the terminal. This tool uses the [xkcd API](https://xkcd.com/json.html) to get the image and the [Click](http://click.pocoo.org/) python package to wrap the script into a beautiful command line interface tool. 
+ **xkcd** is a command line tool written in Python which will fetch you the comics right in the terminal. This tool uses the [xkcd API](https://xkcd.com/json.html) to get the image and the [Click](http://click.pocoo.org/) python package to wrap the script into a beautiful command line interface tool. Supports only Python 3.x and Unix Based OS only for now. Windows update coming later :)
 
 
 ## Installation
