@@ -2,7 +2,6 @@ import os
 import click
 import json
 import urllib
-import urllib
 from PIL import Image
 import requests
 from io import BytesIO
