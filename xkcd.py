@@ -1,7 +1,7 @@
 import os
 import click
 import json
-import urllib.request
+import urllib
 import urllib
 from PIL import Image
 import requests
@@ -18,13 +18,13 @@ def cli(random):
     # print(random)
     rand_digits = str(randint(100, 999))
     if random == 'random':
-        with urllib.request.urlopen("https://xkcd.com/" + rand_digits + "/info.0.json") as url:
+        with urllib.urlopen("https://xkcd.com/" + rand_digits + "/info.0.json") as url:
             data = json.loads(url.read().decode())
             response = requests.get(data['img'])
             img = Image.open(BytesIO(response.content))
             img.show()
     else:
-        with urllib.request.urlopen("https://xkcd.com/info.0.json") as url:
+        with urllib.urlopen("https://xkcd.com/info.0.json") as url:
             data = json.loads(url.read().decode())
             response = requests.get(data['img'])
             img = Image.open(BytesIO(response.content))
