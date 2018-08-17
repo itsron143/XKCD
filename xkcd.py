@@ -6,14 +6,15 @@ from PIL import Image
 import requests
 from io import BytesIO
 from random import randint
-
+import sh
 
 @click.command()
 @click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
 def cli(random):
     """XCKD Terminal Tool"""
     #click.echo('Hello World!')
-    os.system('figlet -c "X K C D" | lolcat')
+    #os.system('figlet -c "X K C D" | lolcat')
+    sh.lolcat(sh.figlet("-c", "X K C D"))
     # print(random)
     rand_digits = str(randint(100, 999))
     if random == 'random':
