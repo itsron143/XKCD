@@ -1,6 +1,5 @@
 import os
 import click
-from sh import lolcat, figlet
 import json
 import urllib.request
 import json
@@ -19,6 +18,7 @@ def cli(random):
     # os.system('figlet -c "X K C D" | lolcat')
     # print(random)
     try:
+        from sh import lolcat, figlet # Hacky fix for Build to pass system packages
         print(lolcat(figlet("-c", "X K C D")))
     except ImportError:
         print("Welcome to xkcd Comics!")
