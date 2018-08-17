@@ -12,8 +12,8 @@ from random import randint
 def cli(random):
     """XCKD Terminal Tool"""
     #click.echo('Hello World!')
-    os.system('figlet -c "X K C D" | lolcat')
-    # sh.lolcat(sh.figlet("-c", "X K C D"))
+    # os.system('figlet -c "X K C D" | lolcat')
+    print(sh.lolcat(sh.figlet("-c", "X K C D")))
     # print(random)
     rand_digits = str(randint(100, 999))
     if random == 'random':
