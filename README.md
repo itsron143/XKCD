@@ -48,3 +48,9 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
   $ xkcd --help
   ```
  Feel free to contribute! Let me know if there are any issues with the installation or running of the package using the GitHub issues. All suggestion are welcome.
+
+## License
+ 
+The MIT License (MIT)
+
+Copyright (c) 2018 [Rounak Vyas](https://www.linkedin.com/in/itsron143/)
