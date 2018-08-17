@@ -6,6 +6,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 from random import randint
+import sh
 
 @click.command()
 @click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
