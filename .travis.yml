@@ -1,8 +1,7 @@
 language: python
 python:
   # We don't actually use the Travis Python, but this keeps it organized.
-  - "2.7"
-  - "3.5"
+  - "3.4"
   - "3.6"
 install:
   - sudo apt-get update
@@ -22,7 +21,7 @@ install:
   - conda info -a
 
   # Replace dep1 dep2 ... with your dependencies
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION dep1 dep2 ...
+  - conda create -q -n test-environment python=3.4
   - source activate test-environment
   - conda install pip
   - pip install -r requirements.txt
