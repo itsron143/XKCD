@@ -2,7 +2,7 @@
 xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webcomic) created by American author [Randall Munroe](https://en.wikipedia.org/wiki/Randall_Munroe). It is a comic of Romance, Sarcasm, Math and Language.
 <br>
 <p align="center">
-  <img src="images/xkcd.png" width="350"/>
+  <img src="assets/xkcd.png" width="350"/>
 </p>
 
 
@@ -11,7 +11,6 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
  <p></p>
  
  **Supports only Python 3.x and Unix Based OS only for now. Windows update coming later :)**
-
 
 ## Installation
 
@@ -28,6 +27,25 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
   ```
 
 * Install the necessary dependencies
+  * For Mac Users (Have [Homebrew](https://brew.sh/) installed)
+  
+    ```
+    $ brew install figlet 
+    ```
+  
+    ```
+    $ brew install lolcat
+    ```
+  
+  * For Linux Users (Debian only)
+  
+    ```
+    $ sudo apt-get install figlet
+    ```
+    
+    ```
+    $ sudo apt-get install lolcat
+    ```
   
   ```
   $ pip install -r requirements.txt
