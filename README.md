@@ -27,25 +27,6 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
   ```
 
 * Install the necessary dependencies
-  * For Mac Users (Have [Homebrew](https://brew.sh/) installed)
-  
-    ```
-    $ brew install figlet 
-    ```
-  
-    ```
-    $ brew install lolcat
-    ```
-  
-  * For Linux Users (Debian only)
-  
-    ```
-    $ sudo apt-get install figlet
-    ```
-    
-    ```
-    $ sudo apt-get install lolcat
-    ```
   
   ```
   $ pip install -r requirements.txt
