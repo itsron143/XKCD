@@ -15,6 +15,7 @@ before_install:
     
 install:
   - pip install -r requirements.txt
+  - pip3 install sh
   - pip install --editable .
   
 script:
