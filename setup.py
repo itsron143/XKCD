@@ -9,6 +9,7 @@ setup(
         'Pillow',
         'requests',
         'urllib3',
+        'sh',
     ],
     entry_points='''
         [console_scripts]
