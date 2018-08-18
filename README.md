@@ -15,6 +15,8 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
  
  **Supports only Python 3.x and Unix Based OS only for now. Windows update coming later :)**
 
+<img src="https://media.giphy.com/media/1kI2yzft2DGTIypmwW/giphy.gif"/>
+
 ## Installation
 
 * Clone the repository (Fork it as well if you'd like to update it or modify it)
