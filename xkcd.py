@@ -1,41 +1,47 @@
-import os
-import click
+import argparse
 import json
-import urllib.request
-import json
-import urllib
-from PIL import Image
 import requests
+
+from PIL import Image
 from io import BytesIO
 from random import randint
 
 
-@click.command()
-@click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
 def cli(random):
     """XKCD Terminal Tool"""
-    #click.echo('Hello World!')
-    # os.system('figlet -c "X K C D" | lolcat')
-    # print(random)
+ 
     try:
         from sh import lolcat, figlet # Hacky fix for Build to pass system packages
         print(lolcat(figlet("-c", "X K C D")))
     except ImportError:
         print("Welcome to xkcd Comics!")
-    rand_digits = str(randint(100, 999))
+
     try:
-        if random == 'random':
-            with urllib.request.urlopen("https://xkcd.com/" + rand_digits + "/info.0.json") as url:
-                data = json.loads(url.read().decode())
-                response = requests.get(data['img'])
-                img = Image.open(BytesIO(response.content))
-                img.show()
+        if random:
+            rand_digits = randint(100, 999)
+            endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
         else:
-            with urllib.request.urlopen("https://xkcd.com/info.0.json") as url:
-                data = json.loads(url.read().decode())
-                response = requests.get(data['img'])
-                img = Image.open(BytesIO(response.content))
-                img.show()
-    except urllib.error.URLError:
+            endpoint = "https://xkcd.com/info.0.json"
+
+        with requests.Session() as s:
+            content = s.get(endpoint).content.decode()
+            data = json.loads(content)
+            res = s.get(data["img"])
+            img = Image.open(BytesIO(res.content))
+            img.show()
+
+    except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
         error_image.show()
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--random",
+        action="store_true",
+        help="Get a random comic."
+    )
+    args = parser.parse_args()
+    
+    cli(args.random)

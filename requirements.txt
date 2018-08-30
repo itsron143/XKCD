@@ -1,5 +1,3 @@
 requests
 Pillow
-urllib3
-click
 sh

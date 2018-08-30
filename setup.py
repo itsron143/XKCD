@@ -5,10 +5,8 @@ setup(
     version='0.1',
     py_modules=['xkcd'],
     install_requires=[
-        'Click',
         'Pillow',
         'requests',
-        'urllib3',
         'sh',
     ],
     entry_points='''
