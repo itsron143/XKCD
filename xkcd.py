@@ -15,6 +15,7 @@ def cli(random):
         print(lolcat(figlet("-c", "X K C D")))
     except ImportError:
         print("Welcome to xkcd Comics!")
+
     try:
         if random:
             rand_digits = randint(100, 999)
@@ -32,6 +33,7 @@ def cli(random):
     except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
         error_image.show()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
