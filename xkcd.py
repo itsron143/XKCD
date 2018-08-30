@@ -1,9 +1,7 @@
 import os
 import click
 import json
-import urllib.request
 import json
-import urllib
 from PIL import Image
 import requests
 from io import BytesIO
@@ -29,12 +27,13 @@ def cli(random):
         else:
             endpoint = "https://xkcd.com/info.0.json"
 
-        with urllib.request.urlopen(endpoint) as url:
-            data = json.loads(url.read().decode())
-            response = requests.get(data['img'])
-            img = Image.open(BytesIO(response.content))
+        with requests.Session() as s:
+            content = s.get(endpoint).content.decode()
+            data = json.loads(content)
+            res = s.get(data["img"])
+            img = Image.open(BytesIO(res.content))
             img.show()
 
-    except urllib.error.URLError:
+    except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
         error_image.show()
