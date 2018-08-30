@@ -8,7 +8,6 @@ setup(
         'Click',
         'Pillow',
         'requests',
-        'urllib3',
         'sh',
     ],
     entry_points='''
