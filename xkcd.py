@@ -15,9 +15,9 @@ def cli(random):
         print(lolcat(figlet("-c", "X K C D")))
     except ImportError:
         print("Welcome to xkcd Comics!")
-    rand_digits = randint(100, 999)
     try:
         if random:
+            rand_digits = randint(100, 999)
             endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
         else:
             endpoint = "https://xkcd.com/info.0.json"
