@@ -31,12 +31,6 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
   $ cd XKCD
   ```
 
-* Install the necessary dependencies
-  
-  ```
-  $ pip install -r requirements.txt
-  ```
- 
 * Install the package locally
 
   ```
