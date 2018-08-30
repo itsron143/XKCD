@@ -1,6 +1,4 @@
 import argparse
-import os
-import json
 import json
 from PIL import Image
 import requests
@@ -9,10 +7,8 @@ from random import randint
 
 def cli(random):
     """XKCD Terminal Tool"""
-    #click.echo('Hello World!')
-    # os.system('figlet -c "X K C D" | lolcat')
-    # print(random)
-    try:
+    
+	try:
         from sh import lolcat, figlet # Hacky fix for Build to pass system packages
         print(lolcat(figlet("-c", "X K C D")))
     except ImportError:
