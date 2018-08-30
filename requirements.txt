@@ -1,4 +1,3 @@
 requests
 Pillow
-click
 sh

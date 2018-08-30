@@ -5,7 +5,6 @@ setup(
     version='0.1',
     py_modules=['xkcd'],
     install_requires=[
-        'Click',
         'Pillow',
         'requests',
         'sh',
