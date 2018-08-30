@@ -1,5 +1,5 @@
+import argparse
 import os
-import click
 import json
 import json
 from PIL import Image
@@ -7,9 +7,6 @@ import requests
 from io import BytesIO
 from random import randint
 
-
-@click.command()
-@click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
 def cli(random):
     """XKCD Terminal Tool"""
     #click.echo('Hello World!')
@@ -22,7 +19,7 @@ def cli(random):
         print("Welcome to xkcd Comics!")
     rand_digits = randint(100, 999)
     try:
-        if random == 'random':
+        if random:
             endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
         else:
             endpoint = "https://xkcd.com/info.0.json"
@@ -37,3 +34,14 @@ def cli(random):
     except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
         error_image.show()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--random",
+        action="store_true",
+        help="Get a random comic."
+    )
+    args = parser.parse_args()
+    
+    cli(args.random)
