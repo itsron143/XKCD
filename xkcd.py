@@ -1,9 +1,5 @@
-import os
 import click
 import json
-import urllib.request
-import json
-import urllib
 from PIL import Image
 import requests
 from io import BytesIO
@@ -14,9 +10,6 @@ from random import randint
 @click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
 def cli(random):
     """XKCD Terminal Tool"""
-    #click.echo('Hello World!')
-    # os.system('figlet -c "X K C D" | lolcat')
-    # print(random)
     try:
         from sh import lolcat, figlet # Hacky fix for Build to pass system packages
         print(lolcat(figlet("-c", "X K C D")))
