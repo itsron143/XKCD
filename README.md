@@ -1,5 +1,6 @@
 # XKCD
 [![Build Status](https://travis-ci.org/itsron717/XKCD.svg?branch=master)](https://travis-ci.org/itsron717/XKCD)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 <p></p>
 
 xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webcomic) created by American author [Randall Munroe](https://en.wikipedia.org/wiki/Randall_Munroe). It is a comic of Romance, Sarcasm, Math and Language.
