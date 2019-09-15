@@ -24,7 +24,6 @@ install:
   - conda create -q -n test-environment python=3.4
   - source activate test-environment
   - conda install pip
-  - pip install -r requirements.txt
   - pip install --editable .
 
 script:

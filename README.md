@@ -1,6 +1,7 @@
 # XKCD
 
 [![Build Status](https://travis-ci.org/itsron717/XKCD.svg?branch=master)](https://travis-ci.org/itsron717/XKCD)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 <p></p>
 
@@ -17,13 +18,13 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
 
  <p></p>
  
- **Supports only Python 3.x and Unix Based OS only for now. Windows update coming later :)**
+ **Supports only Python 3.x and Linux, MacOs and Windows :)**
 
 <img src="https://media.giphy.com/media/1kI2yzft2DGTIypmwW/giphy.gif"/>
 
 ## Installation
 
-- Run the following command in a terminal
+- Run the following command
 
   ```
   $ pip install git+https://github.com/itsron717/XKCD
