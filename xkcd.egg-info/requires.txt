@@ -1,0 +1,4 @@
+Click
+Pillow
+requests
+sh

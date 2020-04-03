@@ -1,0 +1,9 @@
+README.md
+setup.py
+xkcd.py
+xkcd.egg-info/PKG-INFO
+xkcd.egg-info/SOURCES.txt
+xkcd.egg-info/dependency_links.txt
+xkcd.egg-info/entry_points.txt
+xkcd.egg-info/requires.txt
+xkcd.egg-info/top_level.txt
