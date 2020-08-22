@@ -30,6 +30,12 @@ xkcd, sometimes styled _XKCD_ is a [webcomic](https://en.wikipedia.org/wiki/Webc
   $ pip install git+https://github.com/itsron717/XKCD
   ```
 
+- ### on Arch Linux; there is an [xkcd-git](https://aur.archlinux.org/packages/xkcd-git/) package in the AUR.
+  - Install via your favourite AUR helper:
+  ```
+  $ yay|pikaur|trizen -S xkcd-git
+  ```
+
 - Now the package is successfully installed. Run it using the command
 
   ```
