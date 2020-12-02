@@ -16,11 +16,8 @@ def cli(random):
     except ImportError:
         print("Welcome to xkcd Comics!")
     try:
-        if random == 'random':
-            rand_digits = randint(100, 999)
-            endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
-        else:
-            endpoint = "https://xkcd.com/info.0.json"
+        rand_digits = randint(100, 999)
+        endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
 
         with requests.Session() as s:
             content = s.get(endpoint).content.decode()
