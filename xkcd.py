@@ -16,7 +16,7 @@ def cli(random):
     except ImportError:
         print("Welcome to xkcd Comics!")
     try:
-        rand_digits = randint(100, 999)
+        rand_digits = randint(100, getLatestComicId())
         endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
 
         with requests.Session() as s:
@@ -27,5 +27,16 @@ def cli(random):
             img.show()
 
     except requests.ConnectionError:
+        # Possible XKCD api returned an invalid response for the info.0.json query
         error_image = Image.open("assets/xkcd_404.jpg")
         error_image.show()
+
+        
+def getLatestComicId():
+    try:
+        with requests.Session() as s:
+            content = s.get("https://xkcd.com/info.0.json").content.decode()
+            content = json.loads(content)
+            return int(content["num"])
+    except:
+        return None
