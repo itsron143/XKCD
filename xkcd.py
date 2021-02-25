@@ -19,7 +19,7 @@ def cli(random):
         with requests.Session() as s:
             content = s.get("https://xkcd.com/info.0.json").content.decode()
             data = json.loads(content)
-            HighestNumber = s.get(data["num"])
+            HighestNumber = data["num"]
             print("debug: %s" % HighestNumber)
 
         if random == 'random':
