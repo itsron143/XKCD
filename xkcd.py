@@ -38,18 +38,7 @@ def cli(random,metadata,noimage):
                 print("Title: ", data["title"])
                 print("Number:", data["num"])
                 print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
-<<<<<<< HEAD
-=======
-                print("Alt:   ", data["alt"])
-            else:
-                res = s.get(data["img"])
-                img = Image.open(BytesIO(res.content))
-                img.show()
-                print("Title: ", data["title"])
-                print("Number:", data["num"])
-                print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
->>>>>>> 5bac34afa9fcd21a991394ae4b8f847129456a82
-                print("Alt:   ", data["alt"])
+                print("alt:   ", data ["alt"])
 
     except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
