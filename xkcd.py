@@ -31,7 +31,7 @@ def cli(random):
                 img.show()
                 print("Title: ", data["title"])
                 print("Number:", data["num"])
-                print("Date:  ", data["month"]+"/"+data["day"]+"/"+data["year"])
+                print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
                 print("Alt:   ", data["alt"])
             else:
                 res = s.get(data["img"])
@@ -39,7 +39,7 @@ def cli(random):
                 img.show()
                 print("Title: ", data["title"])
                 print("Number:", data["num"])
-                print("Date:  ", data["month"]+"/"+data["day"]+"/"+data["year"])
+                print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
                 print("Alt:   ", data["alt"])
 
     except requests.ConnectionError:
