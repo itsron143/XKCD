@@ -8,7 +8,9 @@ from random import randint
 
 @click.command()
 @click.option('--random', flag_value='random', default=False, help='Get Random Comic!')
-def cli(random):
+@click.option('--metadata', flag_value='metadata', default=False, help='Print Comic Metadata to Terminal')
+@click.option('--noimage', flag_value='noimage', default=False, help='Do not display comic image.')
+def cli(random,metadata,noimage):
     """XKCD Terminal Tool"""
     try:
         from sh import lolcat, figlet # Hacky fix for Build to pass system packages
@@ -26,12 +28,18 @@ def cli(random):
                 endpoint = "https://xkcd.com/{}/info.0.json".format(rand_digits)
                 content = s.get(endpoint).content.decode()
                 data = json.loads(content)
+            
+            if noimage != "noimage":
                 res = s.get(data["img"])
                 img = Image.open(BytesIO(res.content))
                 img.show()
+
+            if metadata == 'metadata':
                 print("Title: ", data["title"])
                 print("Number:", data["num"])
                 print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
+<<<<<<< HEAD
+=======
                 print("Alt:   ", data["alt"])
             else:
                 res = s.get(data["img"])
@@ -40,6 +48,7 @@ def cli(random):
                 print("Title: ", data["title"])
                 print("Number:", data["num"])
                 print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
+>>>>>>> 5bac34afa9fcd21a991394ae4b8f847129456a82
                 print("Alt:   ", data["alt"])
 
     except requests.ConnectionError:
