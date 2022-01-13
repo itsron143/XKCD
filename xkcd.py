@@ -29,10 +29,18 @@ def cli(random):
                 res = s.get(data["img"])
                 img = Image.open(BytesIO(res.content))
                 img.show()
+                print("Title: ", data["title"])
+                print("Number:", data["num"])
+                print("Date:  ", data["month"]+"/"+data["day"]+"/"+data["year"])
+                print("Alt:   ", data["alt"])
             else:
                 res = s.get(data["img"])
                 img = Image.open(BytesIO(res.content))
                 img.show()
+                print("Title: ", data["title"])
+                print("Number:", data["num"])
+                print("Date:  ", data["month"]+"/"+data["day"]+"/"+data["year"])
+                print("Alt:   ", data["alt"])
 
     except requests.ConnectionError:
         error_image = Image.open("assets/xkcd_404.jpg")
