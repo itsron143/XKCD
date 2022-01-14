@@ -34,9 +34,10 @@ def cli(random,metadata,noimage):
                 img = Image.open(BytesIO(res.content))
                 img.show()
 
+            print("Title: ", data["title"])
+            print("Number:", data["num"])
+
             if metadata == 'metadata':
-                print("Title: ", data["title"])
-                print("Number:", data["num"])
                 print("Date:  ", data["year"]+"/"+data["month"]+"/"+data["day"])
                 print("alt:   ", data ["alt"])
 
